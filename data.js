@@ -119,12 +119,7 @@ const container= document.getElementById("card-container");
 1.creo un ciclo che mi stampi tutte le icone dell'array
 */
 
-/*function createCols() {
-	const column= document.createElement("div");
-	column.classList.add("col")
-	row.append(column);
-	return column;
-}*/
+
 
 
 
@@ -132,7 +127,7 @@ icons.forEach((icon)=>{
 	createCard();
 	card.innerHTML+=
 	`
-	    <i class="fa-solid fa-${icon.name}"></i>
+	    <i class="fa-solid fa-${icon.name} " style="color:${icon.color} ;"></i>
         <span>${icon.name}</span>
     `
 })
@@ -143,3 +138,14 @@ function createCard(){
 	container.append(card);
 	return card
 }
+
+const select= document.querySelector("select")//.addEventListener("change",changeSelector);
+
+
+const selectedArr= icons.filter((icon)=>{
+	const isSelected= icon.type===select.value;
+	return isSelected;
+})
+
+console.log(selectedArr);
+
