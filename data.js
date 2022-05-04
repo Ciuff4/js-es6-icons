@@ -114,15 +114,6 @@ const icons= [
 ];
 const container= document.getElementById("card-container");
 
-/*
-1.creo una griglia per poter stamparci dentro le cards
-1.creo un ciclo che mi stampi tutte le icone dell'array
-*/
-
-
-
-
-
 icons.forEach((icon)=>{
 	createCard();
 	card.innerHTML+=
@@ -139,7 +130,7 @@ function createCard(){
 	return card
 }
 
-const select= document.querySelector("select")//.addEventListener("change",changeSelector);
+const select= document.querySelector("select");
 
 
 const selectedArr= icons.filter((icon)=>{
@@ -149,3 +140,4 @@ const selectedArr= icons.filter((icon)=>{
 
 console.log(selectedArr);
 
+select.addEventListener("change",changeSelector);
