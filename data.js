@@ -133,11 +133,10 @@ function createCard(){
 const select= document.querySelector("select");
 
 
-const selectedArr= icons.filter((icon)=>{
-	const isSelected= icon.type===select.value;
-	return isSelected;
-})
+const selectedArr= icons.filter((icon)=>icon.type===select.value);
 
 console.log(selectedArr);
 
-select.addEventListener("change",changeSelector);
+//console.log(selectedArr);
+
+//select.addEventListener("change",selectedArr);
